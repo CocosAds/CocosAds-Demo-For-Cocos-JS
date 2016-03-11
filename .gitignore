@@ -2,3 +2,5 @@
 sdk/
 demo/frameworks/runtime-src/libCocosAds
 .idea/
+userconf.ini
+demo/frameworks/runtime-src/proj.android/jni/prebuilt/libad.so
