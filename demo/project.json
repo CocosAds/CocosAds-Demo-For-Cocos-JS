@@ -13,6 +13,9 @@
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js"
+        "src/app.js",
+        "src/cocosAds.js",
+        "src/bannerScene.js",
+        "src/interstitialScene.js"
     ]
 }

@@ -1,35 +1,35 @@
 
 var HelloWorldLayer = cc.Layer.extend({
-    sprite:null,
     ctor:function () {
-        //////////////////////////////
-        // 1. super init first
+
         this._super();
 
-        /////////////////////////////
-        // 2. add a menu item with "X" image, which is clicked to quit the program
-        //    you may modify it.
-        // ask the window size
+        if(cc.sys.os == cc.sys.OS_ANDROID || cc.sys.os == cc.sys.OS_IOS) {
+            // 初始化 CocosAds SDK
+            var publisherID = "";
+            if(cc.sys.os == cc.sys.OS_ANDROID) {
+                publisherID = "855310162-C1F5CC-48E8-2B19-34FCDC917";
+            }else if(cc.sys.os == cc.sys.OS_IOS) {
+                publisherID = "855595180-47D2E7-2298-EAA9-6E1886A1F";
+            }
+            cc.CocosAds.getInstance().init(publisherID);
+        }
+
         var size = cc.winSize;
 
-        /////////////////////////////
-        // 3. add your codes below...
-        // add a label shows "Hello World"
-        // create and initialize a label
-        var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
-        // position the label on the center of the screen
-        helloLabel.x = size.width / 2;
-        helloLabel.y = size.height / 2 + 200;
-        // add the label as a child to this layer
-        this.addChild(helloLabel, 5);
+        var labelItemBanner = new cc.MenuItemFont("Banner 广告", function (sender) {
+            cc.director.runScene(new BannerScene());
+        }, this);
+        labelItemBanner.setPosition(cc.p(size.width/2, size.height - 50));
 
-        // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.HelloWorld_png);
-        this.sprite.attr({
-            x: size.width / 2,
-            y: size.height / 2
-        });
-        this.addChild(this.sprite, 0);
+        var labelItemInterstitial = new cc.MenuItemFont("插屏广告", function (sender) {
+            cc.director.runScene(new InterstitialScene());
+        }, this);
+        labelItemInterstitial.setPosition(cc.p(size.width/2, size.height - 100));
+
+        var menu = new cc.Menu(labelItemBanner, labelItemInterstitial);
+        menu.setPosition(cc.p(0,0));
+        this.addChild(menu);
 
         return true;
     }

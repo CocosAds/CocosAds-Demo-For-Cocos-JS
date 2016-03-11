@@ -31,6 +31,7 @@
 #include "experimental/jsb_cocos2dx_experimental_video_manual.h"
 #include "jsb_cocos2dx_experimental_webView_auto.hpp"
 #include "experimental/jsb_cocos2dx_experimental_webView_manual.h"
+#include "jsb_cocos2dx_cocosAds.hpp"
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
@@ -139,6 +140,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     sc->addRegisterCallback(register_all_cocos2dx_experimental_video_manual);
     sc->addRegisterCallback(register_all_cocos2dx_experimental_webView);
     sc->addRegisterCallback(register_all_cocos2dx_experimental_webView_manual);
+    sc->addRegisterCallback(register_all_cocos2dx_cocosAds);
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)

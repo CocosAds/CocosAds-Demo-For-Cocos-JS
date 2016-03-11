@@ -2,12 +2,20 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+### For CocosAds
+include $(CLEAR_VARS)
+LOCAL_MODULE := libad
+LOCAL_SRC_FILES := prebuilt/libad.so
+include $(PREBUILT_SHARED_LIBRARY)
+
 LOCAL_MODULE := cocos2djs_shared
 
 LOCAL_MODULE_FILENAME := libcocos2djs
 
 LOCAL_SRC_FILES := hellojavascript/main.cpp \
-                   ../../Classes/AppDelegate.cpp 
+                   ../../Classes/AppDelegate.cpp \
+                   ../../Classes/CocosAds-android.cpp \
+                   ../../Classes/jsb_cocos2dx_cocosAds.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
