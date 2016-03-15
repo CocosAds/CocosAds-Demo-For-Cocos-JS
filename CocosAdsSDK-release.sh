@@ -7,3 +7,7 @@ cp ${classPath}"CocosAds.h" ${classPath}"CocosAds-android.cpp" ${classPath}"Coco
 helperPath="demo/frameworks/runtime-src/proj.android/src/com/"
 mkdir sdk/com
 cp -rf ${helperPath} sdk/com
+
+jsWrapperPath="demo/src/CocosAds.js"
+mkdir sdk/src
+cp  ${jsWrapperPath} sdk/src
