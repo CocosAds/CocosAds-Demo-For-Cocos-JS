@@ -67,6 +67,18 @@ cc.game.onStart = function(){
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
     //load resources
+
+    if(cc.sys.os == cc.sys.OS_ANDROID || cc.sys.os == cc.sys.OS_IOS) {
+        // 初始化 CocosAds SDK
+        var publisherID = "";
+        if(cc.sys.os == cc.sys.OS_ANDROID) {
+            publisherID = "855310162-C1F5CC-48E8-2B19-34FCDC917";
+        }else if(cc.sys.os == cc.sys.OS_IOS) {
+            publisherID = "855595180-47D2E7-2298-EAA9-6E1886A1F";
+        }
+        cc.CocosAds.getInstance().init(publisherID);
+    }
+
     cc.LoaderScene.preload(g_resources, function () {
         cc.director.runScene(new HelloWorldScene());
     }, this);
