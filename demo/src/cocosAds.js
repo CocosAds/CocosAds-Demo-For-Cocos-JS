@@ -5,6 +5,7 @@
 var cc = cc || {};
 
 cc.CocosAds = cc.CocosAds || {};
+cc.CocosAds.prototype = cc.CocosAds.prototype || {};
 
 //Callback code
 cc.CocosAds.CocosAdsResultCode = {
