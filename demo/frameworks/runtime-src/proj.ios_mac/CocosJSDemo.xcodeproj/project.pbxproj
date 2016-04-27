@@ -183,7 +183,6 @@
 		851D5E861C859422007B98AD /* CocosAds-android.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CocosAds-android.cpp"; sourceTree = "<group>"; };
 		851D5E871C859422007B98AD /* CocosAds-ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CocosAds-ios.mm"; sourceTree = "<group>"; };
 		851D5E881C859422007B98AD /* CocosAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosAds.h; sourceTree = "<group>"; };
-		851D5E8E1C8596DF007B98AD /* ADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRequest.h; path = ../libCocosAds/ADRequest.h; sourceTree = "<group>"; };
 		851D5E8F1C8596DF007B98AD /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Banner.h; path = ../libCocosAds/Banner.h; sourceTree = "<group>"; };
 		851D5E901C8596DF007B98AD /* CocosAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocosAdsManager.h; path = ../libCocosAds/CocosAdsManager.h; sourceTree = "<group>"; };
 		851D5E911C8596DF007B98AD /* CocosAdsRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CocosAdsRes.bundle; path = ../libCocosAds/CocosAdsRes.bundle; sourceTree = "<group>"; };
@@ -335,7 +334,6 @@
 		851D5E8D1C8596CF007B98AD /* libCocosAds */ = {
 			isa = PBXGroup;
 			children = (
-				851D5E8E1C8596DF007B98AD /* ADRequest.h */,
 				851D5E8F1C8596DF007B98AD /* Banner.h */,
 				851D5E901C8596DF007B98AD /* CocosAdsManager.h */,
 				851D5E911C8596DF007B98AD /* CocosAdsRes.bundle */,
